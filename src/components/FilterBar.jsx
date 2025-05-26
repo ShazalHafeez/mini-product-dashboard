@@ -1,3 +1,4 @@
+// src/components/FilterBar.jsx
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
@@ -23,7 +24,7 @@ export default function FilterBar() {
   return (
     <div className="mb-4">
       <label htmlFor="categorySelect" className="form-label text-light">
-        Filter by Category:
+        Filter:
       </label>
       <select
         id="categorySelect"
@@ -37,6 +38,8 @@ export default function FilterBar() {
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
           </option>
         ))}
+        {/* New Favorites option */}
+        <option value="favorites">Favorites</option>
       </select>
     </div>
   );
