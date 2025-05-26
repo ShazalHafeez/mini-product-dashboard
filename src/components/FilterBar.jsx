@@ -22,7 +22,7 @@ export default function FilterBar() {
   if (error) return <div className="text-danger">Error loading categories</div>;
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 d-flex flex-column w-75 mx-auto">
       <label htmlFor="categorySelect" className="form-label text-light">
         Filter:
       </label>
@@ -38,7 +38,6 @@ export default function FilterBar() {
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
           </option>
         ))}
-        {/* New Favorites option */}
         <option value="favorites">Favorites</option>
       </select>
     </div>
